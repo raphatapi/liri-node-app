@@ -64,7 +64,10 @@ function spotify() {
             spotify
             .request(uri)
             .then(function(data) {
-              console.log(data.tracks.items[0].name); 
+                console.log(data.tracks.items[0].artists[0].name);
+                console.log(data.tracks.items[0].name);
+                console.log(data.tracks.items[0].external_urls.spotify);
+                console.log(data.tracks.items[0].album.name);
             })
             .catch(function(err) {
               console.error('Error occurred: ' + err); 
