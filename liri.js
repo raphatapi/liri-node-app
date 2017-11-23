@@ -17,7 +17,9 @@ inquirer
             case "Spotify This Song":
                 spotify();
                 break;
-
+            case "Movie This":
+                omdb();
+                break;
         }
     })
 
@@ -72,6 +74,33 @@ function spotify() {
             })
             .catch(function(err) {
               console.error('Error occurred: ' + err); 
+            });
+        };
+    });
+};
+
+function omdb() {
+    inquirer.prompt([
+        {
+            type: "input",
+            message: "What Movie?",
+            name: "omdb"
+        }
+    ]).then(function(movie){
+        if (movie) {
+            var request = require("request");
+            var queryUrl = "http://www.omdbapi.com/?t=" + movie.omdb + "&apikey=faa36345";
+            request(queryUrl, function(error, response, body){
+                if (!error && response.statusCode === 200) {
+                    console.log("The movie is: " + JSON.parse(body).Title);
+                    console.log("Released Year: " + JSON.parse(body).Year);
+                    console.log("IMDB Rating: " + JSON.parse(body).imdbRating);
+                    console.log("Rotten Tomatoes Rating: " + JSON.parse(body).Ratings[1].Value);
+                    console.log("Production Country: " + JSON.parse(body).Country);
+                    console.log("Languages: " + JSON.parse(body).Language);
+                    console.log("Plot of the movie: " + JSON.parse(body).Plot);
+                    console.log("Actors: " + JSON.parse(body).Actors);
+                };
             });
         };
     });
