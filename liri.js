@@ -1,3 +1,24 @@
+var inquirer = require("inquirer");
+
+inquirer
+    .prompt([
+        {
+            type: "list",
+            message: "What would you like to do?",
+            choices: ["My Tweets", "Spotify This Song", "Movie This", "Do What I Say"],
+            name: "coolThings"
+        }
+    ]).then(function(user){
+
+        switch (user.coolThings) {
+            case "My Tweets":
+                twitter();
+                break;
+            
+
+        }
+    })
+
 function twitter() {
 
     var twitter = require('twitter');
@@ -16,7 +37,6 @@ function twitter() {
                 console.log("================================");
                 console.log(tweets[i].text);
                 console.log(tweets[i].created_at);
-                // console.log("========================");
             }
         }
         
