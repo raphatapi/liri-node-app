@@ -60,14 +60,15 @@ function spotify() {
                 id: "761cc4c64d7a4cc5946c3c3d7de2868c",
                 secret: "351cf552a888409097d9c99d7b478e79"
             });
-            var uri = "https://api.spotify.com/v1/search?q=" + answer.spotify + "&type=track&limit=1";            
+            var uri = "https://api.spotify.com/v1/search?q=" + answer.spotify + "&type=track&limit=1"; 
             spotify
             .request(uri)
             .then(function(data) {
-                console.log(data.tracks.items[0].artists[0].name);
-                console.log(data.tracks.items[0].name);
-                console.log(data.tracks.items[0].external_urls.spotify);
-                console.log(data.tracks.items[0].album.name);
+                var song =  data.tracks.items[0];
+                console.log(song.artists[0].name);
+                console.log(song.name);
+                console.log(song.external_urls.spotify);
+                console.log(song.album.name);
             })
             .catch(function(err) {
               console.error('Error occurred: ' + err); 
