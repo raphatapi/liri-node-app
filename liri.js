@@ -64,7 +64,7 @@ function spotify() {
             spotify
             .request(uri)
             .then(function(data) {
-              console.log(JSON.stringify(data), null, 2); 
+              console.log(data.tracks.items[0].name); 
             })
             .catch(function(err) {
               console.error('Error occurred: ' + err); 
