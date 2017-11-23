@@ -18,6 +18,7 @@
   "homepage": "https://github.com/raphatapi/liri-node-app#readme",
   "dependencies": {
     "inquirer": "^4.0.0",
+    "node-spotify-api": "^1.0.7",
     "twitter": "^1.7.1"
   }
 }

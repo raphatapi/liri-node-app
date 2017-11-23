@@ -14,7 +14,9 @@ inquirer
             case "My Tweets":
                 twitter();
                 break;
-            
+            case "Spotify This Song":
+                spotify();
+                break;
 
         }
     })
@@ -40,5 +42,33 @@ function twitter() {
             }
         }
         
+    });
+};
+
+function spotify() {
+    inquirer.prompt([
+        {
+            type: "input",
+            message: "What Song?",
+            name: "spotify"
+        }
+    ]).then(function(answer){
+        if (answer) {
+           
+            var Spotify = require('node-spotify-api');
+            var spotify = new Spotify({
+                id: "761cc4c64d7a4cc5946c3c3d7de2868c",
+                secret: "351cf552a888409097d9c99d7b478e79"
+            });
+            var uri = "https://api.spotify.com/v1/search?q=" + answer.spotify + "&type=track&limit=1";            
+            spotify
+            .request(uri)
+            .then(function(data) {
+              console.log(JSON.stringify(data), null, 2); 
+            })
+            .catch(function(err) {
+              console.error('Error occurred: ' + err); 
+            });
+        };
     });
 };
