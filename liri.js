@@ -67,10 +67,12 @@ function spotify() {
             .request(uri)
             .then(function(data) {
                 var song =  data.tracks.items[0];
-                console.log(song.artists[0].name);
-                console.log(song.name);
-                console.log(song.external_urls.spotify);
-                console.log(song.album.name);
+                console.log("#################################");
+                console.log("# Artist: " + song.artists[0].name);
+                console.log("# Song Name: " + song.name);
+                console.log("# Listen: " + song.external_urls.spotify);
+                console.log("# Album: " + song.album.name);
+                console.log("#################################");
             })
             .catch(function(err) {
               console.error('Error occurred: ' + err); 
@@ -92,14 +94,16 @@ function omdb() {
             var queryUrl = "http://www.omdbapi.com/?t=" + movie.omdb + "&apikey=faa36345";
             request(queryUrl, function(error, response, body){
                 if (!error && response.statusCode === 200) {
-                    console.log("The movie is: " + JSON.parse(body).Title);
-                    console.log("Released Year: " + JSON.parse(body).Year);
-                    console.log("IMDB Rating: " + JSON.parse(body).imdbRating);
-                    console.log("Rotten Tomatoes Rating: " + JSON.parse(body).Ratings[1].Value);
-                    console.log("Production Country: " + JSON.parse(body).Country);
-                    console.log("Languages: " + JSON.parse(body).Language);
-                    console.log("Plot of the movie: " + JSON.parse(body).Plot);
-                    console.log("Actors: " + JSON.parse(body).Actors);
+                    console.log("**************************************************************");
+                    console.log("* The movie is: " + JSON.parse(body).Title);
+                    console.log("* Released Year: " + JSON.parse(body).Year);
+                    console.log("* IMDB Rating: " + JSON.parse(body).imdbRating);
+                    console.log("* Rotten Tomatoes Rating: " + JSON.parse(body).Ratings[1].Value);
+                    console.log("* Production Country: " + JSON.parse(body).Country);
+                    console.log("* Languages: " + JSON.parse(body).Language);
+                    console.log("* Plot of the movie: " + JSON.parse(body).Plot);
+                    console.log("* Actors: " + JSON.parse(body).Actors);
+                    console.log("**************************************************************");
                 };
             });
         } else {
@@ -107,14 +111,16 @@ function omdb() {
             var queryUrl = "http://www.omdbapi.com/?t=mr+nobody&apikey=faa36345";
             request(queryUrl, function(error, response, body){
                 if (!error && response.statusCode === 200) {
-                    console.log("The movie is: " + JSON.parse(body).Title);
-                    console.log("Released Year: " + JSON.parse(body).Year);
-                    console.log("IMDB Rating: " + JSON.parse(body).imdbRating);
-                    console.log("Rotten Tomatoes Rating: " + JSON.parse(body).Ratings[1].Value);
-                    console.log("Production Country: " + JSON.parse(body).Country);
-                    console.log("Languages: " + JSON.parse(body).Language);
-                    console.log("Plot of the movie: " + JSON.parse(body).Plot);
-                    console.log("Actors: " + JSON.parse(body).Actors);
+                    console.log("**************************************************************");
+                    console.log("* The movie is: " + JSON.parse(body).Title);
+                    console.log("* Released Year: " + JSON.parse(body).Year);
+                    console.log("* IMDB Rating: " + JSON.parse(body).imdbRating);
+                    console.log("* Rotten Tomatoes Rating: " + JSON.parse(body).Ratings[1].Value);
+                    console.log("* Production Country: " + JSON.parse(body).Country);
+                    console.log("* Languages: " + JSON.parse(body).Language);
+                    console.log("* Plot of the movie: " + JSON.parse(body).Plot);
+                    console.log("* Actors: " + JSON.parse(body).Actors);
+                    console.log("**************************************************************");
                 };
             });
         };
