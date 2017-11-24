@@ -55,8 +55,7 @@ function spotify() {
             name: "spotify"
         }
     ]).then(function(answer){
-        if (answer) {
-           
+        if (answer.spotify) {
             var Spotify = require('node-spotify-api');
             var spotify = new Spotify({
                 id: "761cc4c64d7a4cc5946c3c3d7de2868c",
@@ -77,7 +76,29 @@ function spotify() {
             .catch(function(err) {
               console.error('Error occurred: ' + err); 
             });
-        };
+        } else {
+            var Spotify = require('node-spotify-api');
+            var spotify = new Spotify({
+                id: "761cc4c64d7a4cc5946c3c3d7de2868c",
+                secret: "351cf552a888409097d9c99d7b478e79"
+            });
+            var uri = "https://api.spotify.com/v1/tracks/3n3Ppam7vgaVa1iaRUc9Lp";
+            spotify
+            .request(uri)
+            .then(function(data) {
+                // var song =  data.album;
+                // // console.log(song);
+                console.log("#################################");
+                console.log("# Artist: " + data.artists[0].name);
+                console.log("# Song Name: " + data.name);
+                console.log("# Listen: " + data.external_urls.spotify);
+                console.log("# Album: " + data.album.name);
+                console.log("#################################");
+            })
+            .catch(function(err) {
+              console.error('Error occurred: ' + err); 
+            });
+        }
     });
 };
 
