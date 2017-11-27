@@ -15,7 +15,7 @@ inquirer
                 twitter();
                 break;
             case "Spotify This Song":
-                spotify();
+                spotifyPrompt();
                 break;
             case "Movie This":
                 omdb();
@@ -50,21 +50,16 @@ function twitter() {
     });
 };
 
-function spotify() {
-    inquirer.prompt([
-        {
-            type: "input",
-            message: "What Song?",
-            name: "spotify"
-        }
-    ]).then(function(answer){
-        if (answer.spotify) {
+function spotify(answer) {
+
+   
+        if (answer.spotifyName) {
             var Spotify = require('node-spotify-api');
             var spotify = new Spotify({
                 id: "761cc4c64d7a4cc5946c3c3d7de2868c",
                 secret: "351cf552a888409097d9c99d7b478e79"
             });
-            var uri = "https://api.spotify.com/v1/search?q=" + answer.spotify + "&type=track&limit=1"; 
+            var uri = "https://api.spotify.com/v1/search?q=" + answer.spotifyName + "&type=track&limit=1"; 
             spotify
             .request(uri)
             .then(function(data) {
@@ -100,10 +95,23 @@ function spotify() {
               console.error("Error occurred: " + err); 
             });
         }
-    });
+    
 };
 
+function spotifyPrompt() {
+    inquirer.prompt([
+        {
+            type: "input",
+            message: "What Song?",
+            name: "spotifyName"
+        }
+    ]).then(function(res){
+        spotify(res);
+    });
+}
+
 function omdb() {
+
     inquirer.prompt([
         {
             type: "input",
@@ -150,6 +158,7 @@ function omdb() {
 };
 
 function doWhatISay() {
+
     var fs = require("fs");
 
     fs.readFile("random.txt", "utf-8", function(error, data) {
@@ -157,28 +166,8 @@ function doWhatISay() {
             return console.log(error);
           }
           var dataArr = data.split(",");
-        //   console.log(dataArr);
-        //   console.log(dataArr[1]);
-
-          var Spotify = require('node-spotify-api');
-          var spotify = new Spotify({
-              id: "761cc4c64d7a4cc5946c3c3d7de2868c",
-              secret: "351cf552a888409097d9c99d7b478e79"
-          });
-          var uri = "https://api.spotify.com/v1/search?q=" + dataArr[1] + "&type=track&limit=1"; 
-          spotify
-          .request(uri)
-          .then(function(data) {
-              var song =  data.tracks.items[0];
-              console.log("#################################");
-              console.log("# Artist: " + song.artists[0].name);
-              console.log("# Song Name: " + song.name);
-              console.log("# Listen: " + song.external_urls.spotify);
-              console.log("# Album: " + song.album.name);
-              console.log("#################################");
-          })
-          .catch(function(err) {
-            console.error('Error occurred: ' + err); 
-          });          
-    })
-}
+            var answer = {};
+            answer.spotifyName = dataArr[1];
+            spotify(answer);      
+    });
+};
