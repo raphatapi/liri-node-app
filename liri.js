@@ -1,33 +1,31 @@
+var fs = require("fs");
+
 var inquirer = require("inquirer");
-
-inquirer
-    .prompt([
-        {
-            type: "list",
-            message: "What would you like to do?",
-            choices: ["My Tweets", "Spotify This Song", "Movie This", "Do What I Say"],
-            name: "coolThings"
-        }
-    ]).then(function(user){
-
-        switch (user.coolThings) {
-            case "My Tweets":
-                twitter();
-                break;
-            case "Spotify This Song":
-                spotifyPrompt();
-                break;
-            case "Movie This":
-                omdb();
-                break;
-            case "Do What I Say":
-                doWhatISay();
-                break;
-        }
-    })
+inquirer.prompt([
+    {
+        type: "list",
+        message: "What would you like to do?",
+        choices: ["My Tweets", "Spotify This Song", "Movie This", "Do What I Say"],
+        name: "coolThings"
+    }
+]).then(function(user){
+    switch (user.coolThings) {
+        case "My Tweets":
+            twitter();
+            break;
+        case "Spotify This Song":
+            spotifyPrompt();
+            break;
+        case "Movie This":
+            omdb();
+            break;
+        case "Do What I Say":
+            doWhatISay();
+            break;
+    };
+});
 
 function twitter() {
-
     var twitter = require('twitter');
     var keys = require("./keys.js");
     var t = new twitter(keys);
@@ -44,57 +42,72 @@ function twitter() {
                 console.log("================================");
                 console.log(tweets[i].text);
                 console.log(tweets[i].created_at);
-            }
-        }
+                
+                var tweetsObject = {text: tweets[i].text, created: tweets[i].created_at};
+                fs.appendFileSync("log.txt", JSON.stringify(tweetsObject, null, 2));
+                
+            };
+        };
         
     });
 };
 
 function spotify(answer) {
-
    
-        if (answer.spotifyName) {
-            var Spotify = require('node-spotify-api');
-            var spotify = new Spotify({
-                id: "761cc4c64d7a4cc5946c3c3d7de2868c",
-                secret: "351cf552a888409097d9c99d7b478e79"
-            });
-            var uri = "https://api.spotify.com/v1/search?q=" + answer.spotifyName + "&type=track&limit=1"; 
-            spotify
-            .request(uri)
-            .then(function(data) {
-                var song =  data.tracks.items[0];
-                console.log("#################################");
-                console.log("# Artist: " + song.artists[0].name);
-                console.log("# Song Name: " + song.name);
-                console.log("# Listen: " + song.external_urls.spotify);
-                console.log("# Album: " + song.album.name);
-                console.log("#################################");
-            })
-            .catch(function(err) {
-              console.error('Error occurred: ' + err); 
-            });
-        } else {
-            var Spotify = require('node-spotify-api');
-            var spotify = new Spotify({
-                id: "761cc4c64d7a4cc5946c3c3d7de2868c",
-                secret: "351cf552a888409097d9c99d7b478e79"
-            });
-            var uri = "https://api.spotify.com/v1/tracks/3DYVWvPh3kGwPasp7yjahc";
-            spotify
-            .request(uri)
-            .then(function(data) {
-                console.log("#################################");
-                console.log("# Artist: " + data.artists[0].name);
-                console.log("# Song Name: " + data.name);
-                console.log("# Listen: " + data.external_urls.spotify);
-                console.log("# Album: " + data.album.name);
-                console.log("#################################");
-            })
-            .catch(function(err) {
-              console.error("Error occurred: " + err); 
-            });
-        }
+    if (answer.spotifyName) {
+        var Spotify = require('node-spotify-api');
+        var spotify = new Spotify({
+            id: "761cc4c64d7a4cc5946c3c3d7de2868c",
+            secret: "351cf552a888409097d9c99d7b478e79"
+        });
+        var uri = "https://api.spotify.com/v1/search?q=" + answer.spotifyName + "&type=track&limit=1"; 
+        spotify.request(uri).then(function(data) {
+            var song =  data.tracks.items[0];
+            var songsObject = {
+                Artist: song.artists[0].name,
+                Name: song.name,
+                Link: song.external_urls.spotify,
+                Album: song.album.name
+            };
+            console.log("#################################");
+            console.log("# Artist: " + songsObject.Artist);
+            console.log("# Song Name: " + songsObject.Name);
+            console.log("# Listen: " + songsObject.Link);
+            console.log("# Album: " + songsObject.Album);
+            console.log("#################################");
+
+            fs.appendFileSync("log.txt", JSON.stringify(songsObject, null, 2));
+
+        }).catch(function(err) {
+            console.error('Error occurred: ' + err); 
+        });
+    } else {
+        var Spotify = require('node-spotify-api');
+        var spotify = new Spotify({
+            id: "761cc4c64d7a4cc5946c3c3d7de2868c",
+            secret: "351cf552a888409097d9c99d7b478e79"
+        });
+        var uri = "https://api.spotify.com/v1/tracks/3DYVWvPh3kGwPasp7yjahc";
+        spotify.request(uri).then(function(data) {
+            var songsObject = {
+                Artist: data.artists[0].name,
+                Name: data.name,
+                Link: data.external_urls.spotify,
+                Album: data.album.name
+            };
+            console.log("#################################");
+            console.log("# Artist: " + songsObject.Artist);
+            console.log("# Song Name: " + songsObject.Name);
+            console.log("# Listen: " + songsObject.Link);
+            console.log("# Album: " + songsObject.Album);
+            console.log("#################################");
+
+            fs.appendFileSync("log.txt", JSON.stringify(songsObject, null, 2));
+
+        }).catch(function(err) {
+            console.error("Error occurred: " + err); 
+        });
+    };
     
 };
 
@@ -108,10 +121,9 @@ function spotifyPrompt() {
     ]).then(function(res){
         spotify(res);
     });
-}
+};
 
 function omdb() {
-
     inquirer.prompt([
         {
             type: "input",
@@ -124,16 +136,28 @@ function omdb() {
             var queryUrl = "http://www.omdbapi.com/?t=" + movie.omdb + "&apikey=faa36345";
             request(queryUrl, function(error, response, body){
                 if (!error && response.statusCode === 200) {
+                    var moviesObject = {
+                        Name: JSON.parse(body).Title,
+                        Year: JSON.parse(body).Year,
+                        imdbRating: JSON.parse(body).imdbRating,
+                        rottenRating: JSON.parse(body).Ratings[1].Value,
+                        Production: JSON.parse(body).Country,
+                        Language: JSON.parse(body).Language,
+                        Plot: JSON.parse(body).Plot,
+                        Actors: JSON.parse(body).Actors
+                    };
                     console.log("**************************************************************");
-                    console.log("* The movie is: " + JSON.parse(body).Title);
-                    console.log("* Released Year: " + JSON.parse(body).Year);
-                    console.log("* IMDB Rating: " + JSON.parse(body).imdbRating);
-                    console.log("* Rotten Tomatoes Rating: " + JSON.parse(body).Ratings[1].Value);
-                    console.log("* Production Country: " + JSON.parse(body).Country);
-                    console.log("* Languages: " + JSON.parse(body).Language);
-                    console.log("* Plot of the movie: " + JSON.parse(body).Plot);
-                    console.log("* Actors: " + JSON.parse(body).Actors);
+                    console.log("* The movie is: " + moviesObject.Name);
+                    console.log("* Released Year: " + moviesObject.Year);
+                    console.log("* IMDB Rating: " + moviesObject.imdbRating);
+                    console.log("* Rotten Tomatoes Rating: " + moviesObject.rottenRating);
+                    console.log("* Production Country: " + moviesObject.Production);
+                    console.log("* Languages: " + moviesObject.Language);
+                    console.log("* Plot of the movie: " + moviesObject.Plot);
+                    console.log("* Actors: " + moviesObject.Actors);
                     console.log("**************************************************************");
+
+                    fs.appendFileSync("log.txt", JSON.stringify(moviesObject, null, 2));
                 };
             });
         } else {
@@ -141,16 +165,28 @@ function omdb() {
             var queryUrl = "http://www.omdbapi.com/?t=mr+nobody&apikey=faa36345";
             request(queryUrl, function(error, response, body){
                 if (!error && response.statusCode === 200) {
+                    var moviesObject = {
+                        Name: JSON.parse(body).Title,
+                        Year: JSON.parse(body).Year,
+                        imdbRating: JSON.parse(body).imdbRating,
+                        rottenRating: JSON.parse(body).Ratings[1].Value,
+                        Production: JSON.parse(body).Country,
+                        Language: JSON.parse(body).Language,
+                        Plot: JSON.parse(body).Plot,
+                        Actors: JSON.parse(body).Actors
+                    };
                     console.log("**************************************************************");
-                    console.log("* The movie is: " + JSON.parse(body).Title);
-                    console.log("* Released Year: " + JSON.parse(body).Year);
-                    console.log("* IMDB Rating: " + JSON.parse(body).imdbRating);
-                    console.log("* Rotten Tomatoes Rating: " + JSON.parse(body).Ratings[1].Value);
-                    console.log("* Production Country: " + JSON.parse(body).Country);
-                    console.log("* Languages: " + JSON.parse(body).Language);
-                    console.log("* Plot of the movie: " + JSON.parse(body).Plot);
-                    console.log("* Actors: " + JSON.parse(body).Actors);
+                    console.log("* The movie is: " + moviesObject.Name);
+                    console.log("* Released Year: " + moviesObject.Year);
+                    console.log("* IMDB Rating: " + moviesObject.imdbRating);
+                    console.log("* Rotten Tomatoes Rating: " + moviesObject.rottenRating);
+                    console.log("* Production Country: " + moviesObject.Production);
+                    console.log("* Languages: " + moviesObject.Language);
+                    console.log("* Plot of the movie: " + moviesObject.Plot);
+                    console.log("* Actors: " + moviesObject.Actors);
                     console.log("**************************************************************");
+
+                    fs.appendFileSync("log.txt", JSON.stringify(moviesObject, null, 2));
                 };
             });
         };
@@ -158,16 +194,13 @@ function omdb() {
 };
 
 function doWhatISay() {
-
-    var fs = require("fs");
-
     fs.readFile("random.txt", "utf-8", function(error, data) {
         if (error) {
             return console.log(error);
           }
-          var dataArr = data.split(",");
-            var answer = {};
-            answer.spotifyName = dataArr[1];
-            spotify(answer);      
+        var dataArr = data.split(",");
+        var answer = {};
+        answer.spotifyName = dataArr[1];
+        spotify(answer);      
     });
 };

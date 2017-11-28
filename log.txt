@@ -1,0 +1,94 @@
+{
+  "text": "What's up?",
+  "created": "Wed Nov 22 18:26:37 +0000 2017"
+}{
+  "text": "I Love Twitter",
+  "created": "Tue Nov 21 15:01:42 +0000 2017"
+}{
+  "text": "@RamonesOfficial my son is a big fan! Happy Halloween https://t.co/YqiZ5DTY7x",
+  "created": "Thu Nov 02 23:04:24 +0000 2017"
+}{
+  "text": "@anunes80 Tô bebo https://t.co/aN2NvURrIR",
+  "created": "Sat Oct 21 03:22:08 +0000 2017"
+}{
+  "text": "@anunes80 Bora velho https://t.co/685vbBcVux",
+  "created": "Sat Oct 21 03:05:59 +0000 2017"
+}{
+  "text": "RT @jaketapper: A) because it isn't. \nB) what you call \"fake\" = news you don't like\nC) Committee busy investigating Russia and possible col…",
+  "created": "Thu Oct 05 14:55:01 +0000 2017"
+}{
+  "text": "@JohnKingCNN Abolish electoral college and keep super delegates? How does it work? She's just crying out loud and can't help it",
+  "created": "Thu Sep 14 17:03:04 +0000 2017"
+}{
+  "text": "RT @BernieSanders: I've been criticized for saying this, so let me repeat it: Yes, health care is a right of all people.",
+  "created": "Wed Sep 13 17:02:17 +0000 2017"
+}{
+  "text": "@jaketapper This is why we democrats will have a long journey ahead of us. We need to stop blaming others and look… https://t.co/EP43SKyEsE",
+  "created": "Wed Sep 06 00:31:24 +0000 2017"
+}{
+  "text": "@marcioitapoanfm Edson Almeida!",
+  "created": "Fri Sep 01 12:43:39 +0000 2017"
+}{
+  "text": "#BemAmigos Um abraco aqui de Park City, Utah. Bora Mancini, Bora Vitoria!",
+  "created": "Tue Aug 22 01:02:43 +0000 2017"
+}{
+  "text": "OnePlus 5 International Giveaway @androidauth #giveaway https://t.co/5kJQuyOs1w",
+  "created": "Sun Aug 20 16:42:59 +0000 2017"
+}{
+  "text": "@CBF_Futebol  @AndersonMatos93 Fale sobre essa arbitragem marota de Goiás. É pra ajudar ao Atlético Goianiense? Nem pegou mal",
+  "created": "Fri Aug 18 20:15:56 +0000 2017"
+}{
+  "text": "@realDonaldTrump Thanks Barack Obama!",
+  "created": "Mon Jul 31 19:37:20 +0000 2017"
+}{
+  "text": "@WhiteHouse Start making your products in the USA to begin with",
+  "created": "Thu Jul 27 00:11:37 +0000 2017"
+}{
+  "text": "@WhiteHouse BOOOOOOOO! Show me a solution",
+  "created": "Sun Jul 23 02:57:34 +0000 2017"
+}{
+  "text": "@oneplus Frame 4!",
+  "created": "Sun Jul 16 07:06:53 +0000 2017"
+}{
+  "text": "@GalaticosOnline Indo pra série B com estilo",
+  "created": "Tue Jun 27 18:09:07 +0000 2017"
+}{
+  "text": "@JohnKingCNN @BernieSanders didn't win because DNC corrupt. No coverage on the #DNCFraudLawsuit. Change comes from the root #insidepolitics",
+  "created": "Thu Jun 22 16:29:01 +0000 2017"
+}{
+  "text": "@marcioitapoanfm Penalty claro e deixe de choro. https://t.co/ETLhI4Gq7e",
+  "created": "Sun Jun 18 23:00:31 +0000 2017"
+}{
+  "Artist": "The Beatles",
+  "Name": "Twist And Shout - Remastered",
+  "Link": "https://open.spotify.com/track/5ZBeML7Lf3FMEVviTyvi8l",
+  "Album": "Please Please Me (Remastered)"
+}{
+  "Artist": "Ace of Base",
+  "Name": "The Sign",
+  "Link": "https://open.spotify.com/track/3DYVWvPh3kGwPasp7yjahc",
+  "Album": "Greatest Hits"
+}{
+  "Name": "The Lord of the Rings: The Fellowship of the Ring",
+  "Year": "2001",
+  "imdbRating": "8.8",
+  "rottenRating": "91%",
+  "Production": "New Zealand, USA",
+  "Language": "English, Sindarin",
+  "Plot": "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle Earth from the Dark Lord Sauron.",
+  "Actors": "Alan Howard, Noel Appleby, Sean Astin, Sala Baker"
+}{
+  "Name": "Mr. Nobody",
+  "Year": "2009",
+  "imdbRating": "7.9",
+  "rottenRating": "66%",
+  "Production": "Belgium, Germany, Canada, France, USA, UK",
+  "Language": "English, Mohawk",
+  "Plot": "A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.",
+  "Actors": "Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham"
+}{
+  "Artist": "Backstreet Boys",
+  "Name": "I Want It That Way",
+  "Link": "https://open.spotify.com/track/6e40mgJiCid5HRAGrbpGA6",
+  "Album": "The Hits--Chapter One"
+}
