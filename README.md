@@ -1,5 +1,7 @@
 Liri Node App
 
+![liri](giphy.gif)
+
 Choose from one of the options:
 
 My Tweets - You will see my latest 20 tweets.
