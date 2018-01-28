@@ -91,4 +91,153 @@
   "Name": "I Want It That Way",
   "Link": "https://open.spotify.com/track/6e40mgJiCid5HRAGrbpGA6",
   "Album": "The Hits--Chapter One"
+}{
+  "text": "RT @TheLeadCNN: Lindsey Graham today: I’m concerned by the media’s attempt to label Trump as a kook or not fit to be President.\n\nLindsey Gr…",
+  "created": "Thu Nov 30 23:24:11 +0000 2017"
+}{
+  "text": "@bocaoduda @ECVitoria Só tem larápios! Manoel Matos e Raimundo Viana",
+  "created": "Thu Nov 30 18:00:33 +0000 2017"
+}{
+  "text": "RT @Shepepeto: Em quem vc tem intenção de votar para Presidente do @ECVitoria ? RT aee.",
+  "created": "Thu Nov 30 17:59:08 +0000 2017"
+}{
+  "text": "What's up?",
+  "created": "Wed Nov 22 18:26:37 +0000 2017"
+}{
+  "text": "I Love Twitter",
+  "created": "Tue Nov 21 15:01:42 +0000 2017"
+}{
+  "text": "@RamonesOfficial my son is a big fan! Happy Halloween https://t.co/YqiZ5DTY7x",
+  "created": "Thu Nov 02 23:04:24 +0000 2017"
+}{
+  "text": "@anunes80 Tô bebo https://t.co/aN2NvURrIR",
+  "created": "Sat Oct 21 03:22:08 +0000 2017"
+}{
+  "text": "@anunes80 Bora velho https://t.co/685vbBcVux",
+  "created": "Sat Oct 21 03:05:59 +0000 2017"
+}{
+  "text": "RT @jaketapper: A) because it isn't. \nB) what you call \"fake\" = news you don't like\nC) Committee busy investigating Russia and possible col…",
+  "created": "Thu Oct 05 14:55:01 +0000 2017"
+}{
+  "text": "@JohnKingCNN Abolish electoral college and keep super delegates? How does it work? She's just crying out loud and can't help it",
+  "created": "Thu Sep 14 17:03:04 +0000 2017"
+}{
+  "text": "RT @BernieSanders: I've been criticized for saying this, so let me repeat it: Yes, health care is a right of all people.",
+  "created": "Wed Sep 13 17:02:17 +0000 2017"
+}{
+  "text": "@jaketapper This is why we democrats will have a long journey ahead of us. We need to stop blaming others and look… https://t.co/EP43SKyEsE",
+  "created": "Wed Sep 06 00:31:24 +0000 2017"
+}{
+  "text": "@marcioitapoanfm Edson Almeida!",
+  "created": "Fri Sep 01 12:43:39 +0000 2017"
+}{
+  "text": "#BemAmigos Um abraco aqui de Park City, Utah. Bora Mancini, Bora Vitoria!",
+  "created": "Tue Aug 22 01:02:43 +0000 2017"
+}{
+  "text": "OnePlus 5 International Giveaway @androidauth #giveaway https://t.co/5kJQuyOs1w",
+  "created": "Sun Aug 20 16:42:59 +0000 2017"
+}{
+  "text": "@CBF_Futebol  @AndersonMatos93 Fale sobre essa arbitragem marota de Goiás. É pra ajudar ao Atlético Goianiense? Nem pegou mal",
+  "created": "Fri Aug 18 20:15:56 +0000 2017"
+}{
+  "text": "@realDonaldTrump Thanks Barack Obama!",
+  "created": "Mon Jul 31 19:37:20 +0000 2017"
+}{
+  "text": "@WhiteHouse Start making your products in the USA to begin with",
+  "created": "Thu Jul 27 00:11:37 +0000 2017"
+}{
+  "text": "@WhiteHouse BOOOOOOOO! Show me a solution",
+  "created": "Sun Jul 23 02:57:34 +0000 2017"
+}{
+  "text": "@oneplus Frame 4!",
+  "created": "Sun Jul 16 07:06:53 +0000 2017"
+}{
+  "Artist": "HEALTH",
+  "Name": "Blue Monday (From \"Atomic Blonde\")",
+  "Link": "https://open.spotify.com/track/3saH0t0IajBaothaoG8ZCd",
+  "Album": "Blue Monday (From \"Atomic Blonde\")"
+}{
+  "Artist": "Portugal. The Man",
+  "Name": "Atomic Man",
+  "Link": "https://open.spotify.com/track/43QhrhgRrH9NWy6eoUro4X",
+  "Album": "Evil Friends"
+}{
+  "text": "@GalaticosOnline Parabéns velho @anunes80 pela conquista. Fruto do seu trabalho.",
+  "created": "Thu Jan 04 05:31:48 +0000 2018"
+}{
+  "text": "@thebridge_cafe https://t.co/RDX0GYL9bU",
+  "created": "Fri Dec 22 19:38:53 +0000 2017"
+}{
+  "text": "@washingtonpost @BernieSanders They need to own the fact that the primaries were rigged. Then we can move forward.… https://t.co/EzGvPOIyMV",
+  "created": "Wed Dec 13 17:19:10 +0000 2017"
+}{
+  "text": "@anunes80 https://t.co/DqXKZp5QTi",
+  "created": "Tue Dec 12 04:26:15 +0000 2017"
+}{
+  "text": "RT @ricardodavidecv: Aqui é planejamento! Caso eleito, já tenho o meu executivo de futebol acertado: Erasmo Damiani. Damiani, 52 anos, form…",
+  "created": "Fri Dec 08 20:52:45 +0000 2017"
+}{
+  "text": "Muito bem @ricardodavidecv  https://t.co/H4nkSLLsl4",
+  "created": "Fri Dec 08 20:47:52 +0000 2017"
+}{
+  "text": "RT @ArenaRubroECV: Vovô Mundico: fake declara apoio a Ricardo David e confunde torcida https://t.co/mlkkUchPeo https://t.co/w1pzvUjSjT",
+  "created": "Tue Dec 05 23:38:09 +0000 2017"
+}{
+  "text": "RT @MJGerson: There are few moments when a political party can be said to have lost its soul. GOP support for Moore is one of them. It is t…",
+  "created": "Tue Dec 05 14:33:17 +0000 2017"
+}{
+  "text": "Please help support Ricardo David Presidente, add a #Twibbon now! https://t.co/ngjTpr37yM",
+  "created": "Mon Dec 04 14:14:28 +0000 2017"
+}{
+  "text": "@NFL @Eagles @Panthers @cfrelund Skol https://t.co/I9cphwPCJY",
+  "created": "Fri Dec 01 19:23:50 +0000 2017"
+}{
+  "text": "@AndersonMatos93 @bocaoduda E ai? Sera que tem vergonha na cara? https://t.co/9VKnmW5qZR",
+  "created": "Fri Dec 01 13:39:06 +0000 2017"
+}{
+  "text": "RT @TheLeadCNN: Lindsey Graham today: I’m concerned by the media’s attempt to label Trump as a kook or not fit to be President.\n\nLindsey Gr…",
+  "created": "Thu Nov 30 23:24:11 +0000 2017"
+}{
+  "text": "@bocaoduda @ECVitoria Só tem larápios! Manoel Matos e Raimundo Viana",
+  "created": "Thu Nov 30 18:00:33 +0000 2017"
+}{
+  "text": "RT @Shepepeto: Em quem vc tem intenção de votar para Presidente do @ECVitoria ? RT aee.",
+  "created": "Thu Nov 30 17:59:08 +0000 2017"
+}{
+  "text": "What's up?",
+  "created": "Wed Nov 22 18:26:37 +0000 2017"
+}{
+  "text": "I Love Twitter",
+  "created": "Tue Nov 21 15:01:42 +0000 2017"
+}{
+  "text": "@RamonesOfficial my son is a big fan! Happy Halloween https://t.co/YqiZ5DTY7x",
+  "created": "Thu Nov 02 23:04:24 +0000 2017"
+}{
+  "text": "@anunes80 Tô bebo https://t.co/aN2NvURrIR",
+  "created": "Sat Oct 21 03:22:08 +0000 2017"
+}{
+  "text": "@anunes80 Bora velho https://t.co/685vbBcVux",
+  "created": "Sat Oct 21 03:05:59 +0000 2017"
+}{
+  "text": "RT @jaketapper: A) because it isn't. \nB) what you call \"fake\" = news you don't like\nC) Committee busy investigating Russia and possible col…",
+  "created": "Thu Oct 05 14:55:01 +0000 2017"
+}{
+  "Artist": "Kendrick Lamar",
+  "Name": "LOVE. FEAT. ZACARI.",
+  "Link": "https://open.spotify.com/track/6PGoSes0D9eUDeeAafB2As",
+  "Album": "DAMN."
+}{
+  "Name": "The Matrix",
+  "Year": "1999",
+  "imdbRating": "8.7",
+  "rottenRating": "87%",
+  "Production": "USA",
+  "Language": "English",
+  "Plot": "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
+  "Actors": "Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss, Hugo Weaving"
+}{
+  "Artist": "Backstreet Boys",
+  "Name": "I Want It That Way",
+  "Link": "https://open.spotify.com/track/6e40mgJiCid5HRAGrbpGA6",
+  "Album": "The Hits--Chapter One"
 }
