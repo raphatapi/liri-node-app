@@ -8,7 +8,7 @@ Liri Node App
 
 `node liri.js`
 
-Choose from one of the options:
+### Choose from one of the options:
 
 My Tweets - You will see my latest 20 tweets.
 
