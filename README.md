@@ -2,6 +2,9 @@ Liri Node App
 
 ![liri](giphy.gif)
 
+`git clone https://github.com/raphatapi/liri-node-app.git`
+`node liri.js`
+
 Choose from one of the options:
 
 My Tweets - You will see my latest 20 tweets.
