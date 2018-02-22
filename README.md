@@ -3,6 +3,7 @@ Liri Node App
 ![liri](giphy.gif)
 
 `git clone https://github.com/raphatapi/liri-node-app.git`
+
 `node liri.js`
 
 Choose from one of the options:
